@@ -1,4 +1,4 @@
-![image](https://github.com/user-attachments/assets/dc66d71b-084a-4729-9394-84644d09d4a0)
+<h1>PPOCR_VIET_NAM</h1>
 
 
 # Vision 1 - Trích Xuất Thông Tin Từ Giấy Tờ và Biển Hiệu
