@@ -40,7 +40,8 @@ pip install -r requirements.txt
     File general_dict.txt,
     File vn_dictionary.txt
    ![image](https://github.com/user-attachments/assets/466faca4-9a21-4bae-9789-59552f464e53)
-Dưới đây là toàn bộ file cần thiết cho configs:
+   
+   # Dưới đây là toàn bộ file cần thiết cho configs:
    ```bash
    https://drive.google.com/drive/folders/1DLTX7q04cJOYYO0LDdsyYuY7FHryukDT?usp=sharing
    ```
