@@ -2,17 +2,15 @@
 <H1>PPOCR_VIET_NAM</H1>
 </p>
 
-<div align="center">
-    ![image](https://github.com/user-attachments/assets/61ec6d44-290d-4103-86c4-f148cbb56024)
-    ![image](https://github.com/user-attachments/assets/45dfef0c-f727-4375-a99f-d6112a95bd07)
-</div>
-<div align="center">
+
+![image](https://github.com/user-attachments/assets/61ec6d44-290d-4103-86c4-f148cbb56024)
+![image](https://github.com/user-attachments/assets/45dfef0c-f727-4375-a99f-d6112a95bd07)
 ![image](https://github.com/user-attachments/assets/3ae0eb7c-4824-4c4f-a8c5-66e90c6f96f7)
 ![image](https://github.com/user-attachments/assets/aec30ef2-a80a-4dd5-9dac-7511bd45fb04)
 ![image](https://github.com/user-attachments/assets/d0a8e0d5-f6b0-43f8-a8c5-53a344f29ae4)
 ![image](https://github.com/user-attachments/assets/f5f3c0f3-402a-4a55-a551-98d785720734)
 
-</div>
+
 # Vision 1 - Trích Xuất Thông Tin Từ Giấy Tờ và Biển Hiệu
 
 ## Giới thiệu
