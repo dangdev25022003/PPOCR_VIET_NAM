@@ -39,7 +39,7 @@ pip install -r requirements.txt
     Folder unseen_test_images – chứa 500 ảnh từ im1501 đến im2000,
     File general_dict.txt,
     File vn_dictionary.txt
-   https://github.com/user-attachments/assets/466faca4-9a21-4bae-9789-59552f464e53
+   ![image](https://github.com/user-attachments/assets/466faca4-9a21-4bae-9789-59552f464e53)
    
    # Dưới đây là toàn bộ file cần thiết cho configs:
    ```bash 
@@ -177,9 +177,7 @@ Dưới đây là toàn bộ file cần thiết cho configs:
     File general_dict.txt,
     File vn_dictionary.txt
    ```
-   ``` bash
    ![image](https://github.com/user-attachments/assets/466faca4-9a21-4bae-9789-59552f464e53)
-   ```
 
 3. **Huấn luyện**: Chạy lệnh sau để huấn luyện mô hình:
    ![image](https://github.com/user-attachments/assets/73382023-29d1-402d-a030-7a8f06c9a221)
