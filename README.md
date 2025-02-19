@@ -45,7 +45,7 @@ pip install -r requirements.txt
    ```bash
    https://drive.google.com/drive/folders/1DLTX7q04cJOYYO0LDdsyYuY7FHryukDT?usp=sharing
    ```
-4. **Huấn luyện**: Chạy lệnh sau để huấn luyện mô hình:
+3. **Huấn luyện**: Chạy lệnh sau để huấn luyện mô hình:
    ![image](https://github.com/user-attachments/assets/73382023-29d1-402d-a030-7a8f06c9a221)
 
    ```bash
@@ -95,25 +95,21 @@ pip install -r requirements.txt
     python tools/train.py -c ./configs/det/SAST.yml
    ```
    
-5. **Lưu mô hình**: Mô hình sẽ được lưu trong thư mục `output`.
+4. **Dự Đoán**:
 # Convert mô hình dectection
-    ```bash
     python tools/export_model.py -c ./configs/det/SAST.yml  \
                                  -o Global.pretrained_model=./output/SAST/latest \
                                     Global.save_inference_dir=./inference/SAST
-    ```
 ## Dự đoán trên ảnh
-    ```bash
     python tools/infer/predict_det.py  --det_algorithm="SAST" \
                                        --use_gpu=False \
                                        --det_model_dir="./inference/SAST"  \
                                        --image_dir="your_test_image_path"
-    ```
 <H1>Model Recognition SAST</H1>
 1. **Chuẩn bị dữ liệu**:
 ![image](https://github.com/user-attachments/assets/ea7b1a62-27b3-4406-a7c9-6cb8b7a92ac6)
 Có thể thấy rằng data để train model recognition là mỗi ảnh chứa một chữ trong khi data đã download lại là ảnh chứa nhiều chữ. Do vậy ta phải cắt nhỏ ảnh đã có từ các box chứa text.
-    ```bash
+# Code:
     import json
     import os
     import cv2
@@ -166,7 +162,6 @@ Có thể thấy rằng data để train model recognition là mỗi ảnh chứ
       if not os.path.exists('./data/vietnamese/train/img_crop'):
         os.mkdir('./data/vietnamese/train/img_crop') 
       print_draw_crop_rec_res(img_crop_list,img_name)
-    ```
 Để dự đoán được tiếng việt thì ta cũng cần một file dictionary dành cho tiếng Việt chứa tất cả các kí tự. Do PaddleOCR chưa hỗ trợ tiếng Việt nên ta sẽ dùng file dictionary riêng để train:
 Dưới đây là toàn bộ file cần thiết cho configs:
    ```bash
