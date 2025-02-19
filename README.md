@@ -29,7 +29,7 @@ pip install -r requirements.txt
 <H1>Model Detection SAST</H1>
 
 1. **Chuẩn bị dữ liệu**: Thu thập hình ảnh và nhãn đi kèm (dưới dạng file `.txt`):
-   Bạn có theerr sử dụng trực tiêp dữ liệu cảu VINAI: https://github.com/VinAIResearch/dict-guided
+   Bạn có thể sử dụng trực tiêp dữ liệu của VINAI: https://github.com/VinAIResearch/dict-guided
 
 2. **Tiền xử lý dữ liệu**: Chuyển đổi hình ảnh về định dạng phù hợp, gán nhãn.
    Sau khi tải về và giải nén ra ta sẽ có:
