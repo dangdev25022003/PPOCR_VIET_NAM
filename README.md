@@ -173,13 +173,17 @@ Dưới đây là toàn bộ file cần thiết cho configs:
    ```
 2. **Tiền xử lý dữ liệu**: Chuyển đổi hình ảnh về định dạng phù hợp, gán nhãn.
 # Sau khi tải về và giải nén ra ta sẽ có:
+   ``` bash
     Folder labels – chứa các file annotation của từng image,
     Folder train_images – chứa 1200 ảnh từ im0001 đến im1200,
     Folder test_image – chứa 300 ảnh từ im1201 đến im1500,
     Folder unseen_test_images – chứa 500 ảnh từ im1501 đến im2000,
     File general_dict.txt,
     File vn_dictionary.txt
+   ```
+   ``` bash
    ![image](https://github.com/user-attachments/assets/466faca4-9a21-4bae-9789-59552f464e53)
+   ```
 
 3. **Huấn luyện**: Chạy lệnh sau để huấn luyện mô hình:
    ![image](https://github.com/user-attachments/assets/73382023-29d1-402d-a030-7a8f06c9a221)
@@ -239,13 +243,13 @@ Dưới đây là toàn bộ file cần thiết cho configs:
    ```
    
 4. **Lưu mô hình**: Mô hình sẽ được lưu trong thư mục `output`.
-# Convert mô hình dectection
+   # Convert mô hình dectection
     ```bash
     python tools/export_model.py -c ./configs/rec/SRN.yml \
                              -o Global.pretrained_model=./output/SRN/latest \
                                 Global.save_inference_dir=./inference/SRN
     ```
-## Dự đoán trên ảnh
+   ## Dự đoán trên ảnh
     ```bash
     python tools/infer/predict_rec.py  --image_dir="your_test_image_path" \
                                        --use_gpu=False \
@@ -255,7 +259,7 @@ Dưới đây là toàn bộ file cần thiết cho configs:
                                        --rec_char_type="ch"   \
                                        --rec_char_dict_path="./ppocr/utils/dict/vi_vietnam.txt"
     ```
-## Có thể chạy song song cùng lúc 2 model bằng cách
+   ## Có thể chạy song song cùng lúc 2 model bằng cách
     ```bash
         python ./tools/infer/predict_system.py \
         --use_gpu=False \
