@@ -168,16 +168,6 @@ Dưới đây là toàn bộ file cần thiết cho configs:
    https://drive.google.com/drive/folders/1DLTX7q04cJOYYO0LDdsyYuY7FHryukDT?usp=sharing
    ```
 2. **Tiền xử lý dữ liệu**: Chuyển đổi hình ảnh về định dạng phù hợp, gán nhãn.
-# Sau khi tải về và giải nén ra ta sẽ có:
-   ``` bash
-    Folder labels – chứa các file annotation của từng image,
-    Folder train_images – chứa 1200 ảnh từ im0001 đến im1200,
-    Folder test_image – chứa 300 ảnh từ im1201 đến im1500,
-    Folder unseen_test_images – chứa 500 ảnh từ im1501 đến im2000,
-    File general_dict.txt,
-    File vn_dictionary.txt
-   ```
-   ![image](https://github.com/user-attachments/assets/466faca4-9a21-4bae-9789-59552f464e53)
 
 3. **Huấn luyện**: Chạy lệnh sau để huấn luyện mô hình:
    ![image](https://github.com/user-attachments/assets/73382023-29d1-402d-a030-7a8f06c9a221)
