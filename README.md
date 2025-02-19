@@ -1,15 +1,9 @@
-<p align="center">
-![image](https://github.com/user-attachments/assets/f075262f-45da-4a04-ab47-650b42ccd347)
-</p>
-
-
-
-![image](https://github.com/user-attachments/assets/d0a8e0d5-f6b0-43f8-a8c5-53a344f29ae4)
-![image](https://github.com/user-attachments/assets/f5f3c0f3-402a-4a55-a551-98d785720734)
+![image](https://github.com/user-attachments/assets/dc66d71b-084a-4729-9394-84644d09d4a0)
 
 
 # Vision 1 - Trích Xuất Thông Tin Từ Giấy Tờ và Biển Hiệu
-
+![image](https://github.com/user-attachments/assets/d0a8e0d5-f6b0-43f8-a8c5-53a344f29ae4)
+![image](https://github.com/user-attachments/assets/f5f3c0f3-402a-4a55-a551-98d785720734)
 ## Giới thiệu
 Dự án này sử dụng PaddleOCR để phát hiện và trích xuất văn bản tiếng Việt từ hình ảnh của các loại giấy tờ và biển hiệu. Chương trình sẽ thực hiện các bước xử lý ảnh, nhận diện chữ và xuất kết quả dưới dạng văn bản.
 
