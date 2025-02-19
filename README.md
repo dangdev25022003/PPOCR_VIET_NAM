@@ -245,23 +245,19 @@ Dưới đây là toàn bộ file cần thiết cho configs:
    
 4. **Lưu mô hình**: Mô hình sẽ được lưu trong thư mục `output`.
    # Convert mô hình dectection
-    ```bash
-    python tools/export_model.py -c ./configs/rec/SRN.yml \
+       python tools/export_model.py -c ./configs/rec/SRN.yml \
                              -o Global.pretrained_model=./output/SRN/latest \
                                 Global.save_inference_dir=./inference/SRN
-    ```
+
    ## Dự đoán trên ảnh
-    ```bash
-    python tools/infer/predict_rec.py  --image_dir="your_test_image_path" \
+       python tools/infer/predict_rec.py  --image_dir="your_test_image_path" \
                                        --use_gpu=False \
                                        --rec_algorithm="SRN" \
                                        --rec_model_dir="./inference/SRN"  \
                                        --rec_image_shape="1, 64, 256"  \
                                        --rec_char_type="ch"   \
                                        --rec_char_dict_path="./ppocr/utils/dict/vi_vietnam.txt"
-    ```
    ## Có thể chạy song song cùng lúc 2 model bằng cách
-    ```bash
         python ./tools/infer/predict_system.py \
         --use_gpu=False \
         --det_algorithm="SAST"  \
@@ -274,7 +270,6 @@ Dưới đây là toàn bộ file cần thiết cho configs:
         --drop_score=0.5  \
         --vis_font_path="./font-times-new-roman.ttf" \
         --image_dir="your_test_image_path"
-    ```
 ## Kết quả
 Kết quả nhận diện sẽ được hiển thị trên ảnh đầu vào và xuất dưới dạng văn bản.
 
