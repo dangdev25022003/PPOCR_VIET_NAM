@@ -109,7 +109,7 @@ pip install -r requirements.txt
 1. **Chuẩn bị dữ liệu**:
 ![image](https://github.com/user-attachments/assets/ea7b1a62-27b3-4406-a7c9-6cb8b7a92ac6)
 Có thể thấy rằng data để train model recognition là mỗi ảnh chứa một chữ trong khi data đã download lại là ảnh chứa nhiều chữ. Do vậy ta phải cắt nhỏ ảnh đã có từ các box chứa text.
-# Code:
+
     import json
     import os
     import cv2
