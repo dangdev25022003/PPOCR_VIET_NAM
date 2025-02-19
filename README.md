@@ -27,7 +27,7 @@ Cài các thư viện cần thiết chạy:
 pip install -r requirements.txt
 ```
 <H1>Model Detection SAST</H1>
-## Huấn luyện mô hình
+
 1. **Chuẩn bị dữ liệu**: Thu thập hình ảnh và nhãn đi kèm (dưới dạng file `.txt`):
    Bạn có theerr sử dụng trực tiêp dữ liệu cảu VINAI: https://github.com/VinAIResearch/dict-guided
 
@@ -41,9 +41,9 @@ pip install -r requirements.txt
     File vn_dictionary.txt
    ![image](https://github.com/user-attachments/assets/466faca4-9a21-4bae-9789-59552f464e53)
 Dưới đây là toàn bộ file cần thiết cho configs:
-```bash
-https://drive.google.com/drive/folders/1DLTX7q04cJOYYO0LDdsyYuY7FHryukDT?usp=sharing
-```
+   ```bash
+   https://drive.google.com/drive/folders/1DLTX7q04cJOYYO0LDdsyYuY7FHryukDT?usp=sharing
+   ```
 4. **Huấn luyện**: Chạy lệnh sau để huấn luyện mô hình:
    ![image](https://github.com/user-attachments/assets/73382023-29d1-402d-a030-7a8f06c9a221)
 
@@ -168,11 +168,11 @@ Có thể thấy rằng data để train model recognition là mỗi ảnh chứ
     ```
 Để dự đoán được tiếng việt thì ta cũng cần một file dictionary dành cho tiếng Việt chứa tất cả các kí tự. Do PaddleOCR chưa hỗ trợ tiếng Việt nên ta sẽ dùng file dictionary riêng để train:
 Dưới đây là toàn bộ file cần thiết cho configs:
-```bash
-https://drive.google.com/drive/folders/1DLTX7q04cJOYYO0LDdsyYuY7FHryukDT?usp=sharing
-```
+   ```bash
+   https://drive.google.com/drive/folders/1DLTX7q04cJOYYO0LDdsyYuY7FHryukDT?usp=sharing
+   ```
 2. **Tiền xử lý dữ liệu**: Chuyển đổi hình ảnh về định dạng phù hợp, gán nhãn.
-   Sau khi tải về và giải nén ra ta sẽ có:
+# Sau khi tải về và giải nén ra ta sẽ có:
     Folder labels – chứa các file annotation của từng image,
     Folder train_images – chứa 1200 ảnh từ im0001 đến im1200,
     Folder test_image – chứa 300 ảnh từ im1201 đến im1500,
@@ -181,7 +181,7 @@ https://drive.google.com/drive/folders/1DLTX7q04cJOYYO0LDdsyYuY7FHryukDT?usp=sha
     File vn_dictionary.txt
    ![image](https://github.com/user-attachments/assets/466faca4-9a21-4bae-9789-59552f464e53)
 
-4. **Huấn luyện**: Chạy lệnh sau để huấn luyện mô hình:
+3. **Huấn luyện**: Chạy lệnh sau để huấn luyện mô hình:
    ![image](https://github.com/user-attachments/assets/73382023-29d1-402d-a030-7a8f06c9a221)
 
    ```bash
@@ -223,21 +223,22 @@ https://drive.google.com/drive/folders/1DLTX7q04cJOYYO0LDdsyYuY7FHryukDT?usp=sha
         else:
           train_label.write( img_name+ '\t'+f'{text}' + '\n')
    ```
-Chuẩn bị file Config
-Cách chỉnh sửa file config model recognition cũng tương tự như model detection. Chỉ có một số điểm khác là character_dict_path – đường dẫn file dictionary, use_space_char – dự đoán khoảng trắng hay không, max_text_length – độ dài tối đa kí tự     trong một box.
-Đầu tiên download pretrained model đã được train sẵn với dataset tiếng anh đạt kết quả cao với ICDAR2015:
-    href="https://paddleocr.bj.bcebos.com/dygraph_v2.0/en/rec_r50_vd_srn_train.tar"
-Thêm đường dẫn pretrain model vừa tải vào Global.pretrained_model trong file config (configs/rec/SRN.yml)
-pretrained_model: ./pretrain_models/rec_r50_vd_srn_train/best_accuracy
-
-Tiếp theo chỉnh sửa đường dẫn file dictionary
-character_dict_path: ./ppocr/utils/dict/vi_vietnam.txt
-Huấn luyện mô hình:
+# Chuẩn bị file Config
+   Cách chỉnh sửa file config model recognition cũng tương tự như model detection. Chỉ có một số điểm khác là character_dict_path – đường dẫn file dictionary, use_space_char – dự đoán khoảng trắng hay không, max_text_length – độ dài tối đa kí tự     trong một box.
+   Đầu tiên download pretrained model đã được train sẵn với dataset tiếng anh đạt kết quả cao với ICDAR2015:
+       href="https://paddleocr.bj.bcebos.com/dygraph_v2.0/en/rec_r50_vd_srn_train.tar"
+   Thêm đường dẫn pretrain model vừa tải vào Global.pretrained_model trong file config (configs/rec/SRN.yml)
+   pretrained_model: ./pretrain_models/rec_r50_vd_srn_train/best_accuracy
+   
+  Tiếp theo:
+      chỉnh sửa đường dẫn file dictionary
+      character_dict_path: ./ppocr/utils/dict/vi_vietnam.txt
+   Huấn luyện mô hình:
    ```bash	
     python tools/train.py -c ./configs/rec/SRN.yml 
    ```
    
-6. **Lưu mô hình**: Mô hình sẽ được lưu trong thư mục `output`.
+4. **Lưu mô hình**: Mô hình sẽ được lưu trong thư mục `output`.
 # Convert mô hình dectection
     ```bash
     python tools/export_model.py -c ./configs/rec/SRN.yml \
@@ -254,7 +255,7 @@ Huấn luyện mô hình:
                                        --rec_char_type="ch"   \
                                        --rec_char_dict_path="./ppocr/utils/dict/vi_vietnam.txt"
     ```
-##Có thể chạy song song cùng lúc 2 model bằng cách
+## Có thể chạy song song cùng lúc 2 model bằng cách
     ```bash
         python ./tools/infer/predict_system.py \
         --use_gpu=False \
