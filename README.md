@@ -20,22 +20,36 @@ Dự án này sử dụng PaddleOCR để phát hiện và trích xuất văn b�
 
 
 ## Cài đặt
+
 ```bash
 # Cài đặt PaddleOCR và các thư viện cần thiết
 pip install paddlepaddle
 pip install paddleocr
 pip install opencv-python numpy
 ```
+Cài các thư viện cần thiết chạy:
 ```bash 
-pip install -r requirements.txt ```
+pip install -r requirements.txt
+```
 ## Huấn luyện mô hình
-1. **Chuẩn bị dữ liệu**: Thu thập hình ảnh và nhãn đi kèm (dưới dạng file `.txt`).
+1. **Chuẩn bị dữ liệu**: Thu thập hình ảnh và nhãn đi kèm (dưới dạng file `.txt`):
+   Bạn có theerr sử dụng trực tiêp dữ liệu cảu VINAI: https://github.com/VinAIResearch/dict-guided
+
 2. **Tiền xử lý dữ liệu**: Chuyển đổi hình ảnh về định dạng phù hợp, gán nhãn.
-3. **Huấn luyện**: Chạy lệnh sau để huấn luyện mô hình:
+   Sau khi tải về và giải nén ra ta sẽ có:
+    Folder labels – chứa các file annotation của từng image
+    Folder train_images – chứa 1200 ảnh từ im0001 đến im1200
+    Folder test_image – chứa 300 ảnh từ im1201 đến im1500
+    Folder unseen_test_images – chứa 500 ảnh từ im1501 đến im2000
+    File general_dict.txt
+    File vn_dictionary.txt
+   ![image](https://github.com/user-attachments/assets/466faca4-9a21-4bae-9789-59552f464e53)
+
+4. **Huấn luyện**: Chạy lệnh sau để huấn luyện mô hình:
    ```bash
    python tools/train.py -c configs/rec/ch_PP-OCRv3.yml
    ```
-4. **Lưu mô hình**: Mô hình sẽ được lưu trong thư mục `output`.
+5. **Lưu mô hình**: Mô hình sẽ được lưu trong thư mục `output`.
 
 ## Dự đoán trên ảnh
 ```bash
