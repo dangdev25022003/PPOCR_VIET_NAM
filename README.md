@@ -17,6 +17,8 @@ Dự án này sử dụng PaddleOCR để phát hiện và trích xuất văn b�
 - OpenCV
 - NumPy
 
+
+
 ## Cài đặt
 ```bash
 # Cài đặt PaddleOCR và các thư viện cần thiết
@@ -24,7 +26,8 @@ pip install paddlepaddle
 pip install paddleocr
 pip install opencv-python numpy
 ```
-
+```bash 
+pip install -r requirements.txt ```
 ## Huấn luyện mô hình
 1. **Chuẩn bị dữ liệu**: Thu thập hình ảnh và nhãn đi kèm (dưới dạng file `.txt`).
 2. **Tiền xử lý dữ liệu**: Chuyển đổi hình ảnh về định dạng phù hợp, gán nhãn.
